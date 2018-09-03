@@ -1,0 +1,9 @@
+  dash_notification:
+    alias: Dash Test Notification
+    sequence:
+      - service: notify.alert
+        data:
+          message: 'ALERT!! This message was sent from my dash button!'
+
+
+

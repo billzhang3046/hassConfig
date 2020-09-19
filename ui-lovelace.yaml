@@ -1,0 +1,111 @@
+title: Home
+views:
+  - badges:
+      - entity: binary_sensor.updater
+      - entity: binary_sensor.other
+      - entity: binary_sensor.dishwasher
+      - entity: binary_sensor.coffee_grinder
+      - entity: binary_sensor.dryer
+      - entity: binary_sensor.coffee_maker
+      - entity: binary_sensor.remote_ui
+      - entity: person.bill_zhang
+      - entity: person.sharon_xu
+      - entity: sun.sun
+    cards:
+      - entities:
+          - entity: light.bedroom_table
+          - entity: light.bedroom_floor
+          - entity: switch.bedroom_humidifier
+          - entity: binary_sensor.bedroom_occupancy
+          - entity: sensor.bedroom_temperature
+        show_header_toggle: true
+        title: Bedroom
+        type: entities
+      - entity: climate.hallway
+        theme: Backend-selected
+        type: thermostat
+      - entities:
+          - entity: binary_sensor.bill_presence
+          - entity: switch.fish_tank
+          - entity: switch.library_floor
+          - entity: switch.floor_lamp
+        show_header_toggle: true
+        title: Home Office
+        type: entities
+      - entity: weather.home
+        type: weather-forecast
+      - entities:
+          - switch.entry_door_light
+        show_header_toggle: true
+        title: Frontdoor
+        type: entities
+      - entities:
+          - entity: binary_sensor.sharon_presence
+          - entity: sensor.lock_battery
+          - entity: lock.lock
+          - entity: switch.kitchen_dining_light
+          - entity: switch.sink_light
+          - entity: switch.kitchen_main_light
+          - entity: light.under_cabinet_1
+          - entity: light.under_cabinet_2
+          - entity: light.under_cabinet_3
+        show_header_toggle: true
+        title: Kitchen
+        type: entities
+      - entities:
+          - entity: switch.hall_way_light
+        show_header_toggle: true
+        title: Hallway
+        type: entities
+      - entities:
+          - switch.livingroom_ceiling
+          - light.window
+          - light.tv_console
+          - light.livingrom_table
+          - light.livingroom_floor
+        show_header_toggle: true
+        title: Living Room
+        type: entities
+      - entities:
+          - sensor.sunroom_volume
+          - sensor.sunroom_media_playback_status
+          - switch.sunroom_light
+        show_header_toggle: true
+        title: Sunroom
+        type: entities
+    path: default_view
+    title: Common
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.energy_production
+          - entity: sensor.energy_usage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy overview
+        type: history-graph
+      - entities:
+          - entity: sensor.always_on_usage
+          - entity: sensor.tesla_usage
+          - entity: binary_sensor.ac
+        type: glance
+      - entities:
+          - entity: binary_sensor.coffee_grinder
+          - entity: binary_sensor.coffee_maker
+          - entity: binary_sensor.dishwasher
+          - entity: binary_sensor.dryer
+          - entity: binary_sensor.dyson_2
+          - entity: binary_sensor.electric_vehicle
+          - entity: binary_sensor.furnace
+          - entity: binary_sensor.microwave
+          - entity: binary_sensor.stove_2
+          - entity: binary_sensor.stove_3
+          - entity: binary_sensor.stove_4_2
+          - entity: binary_sensor.stove_5
+          - entity: binary_sensor.stove_5_2
+          - entity: binary_sensor.stove_6
+          - entity: binary_sensor.vacuum
+        title: Equipments
+        type: entities
+    path: energy
+    title: Energy
